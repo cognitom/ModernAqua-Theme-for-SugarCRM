@@ -1,0 +1,56 @@
+version 0.5.7
+- ADD : icon_info.csv explain whitch icon in Oxygen is used for ModernAqua.
+- ADD : readme.txt
+- DEL : some image files not in use.
+- ADD : Action menu.
+- ADD : Mass Update panel.
+- IMPROVED : Calendar tab.
+- ADD : Shared calendar user selector.
+- IMPROVED : style.css overhaul. Original Sugar messy messy code --> some readble lite weight css.
+
+version 0.5.6
+- ADD : Error message bubble.
+- ADD : Dashlets dialog.
+
+version 0.5.5a
+- FIXED : Now the installer supports PRO edition. But our primary focus is on CE, so THIS RELEASE DOES NOT MEAN THAT WE TESTED IT ON PRO EDITION. Also care about license (AGPL & CC).
+
+version 0.5.5
+- ADD : Administration module loader view.
+- ADD : Print popup view.
+- ADD : Change Log popup view.
+- IMPROVED : New css selectors like body#ModuleName.ActionName are available. (It makes easy to tune specific page rendering)
+
+version 0.5.4
+- ADD : Import view.
+- ADD : Administration repair view.
+- FIXED : SugarCE 6.0.2 support. (former versions had wrong themedef setting)
+
+version 0.5.3
+- ADD : Administration view.
+- ADD : Password management view.
+- ADD : Roles view.
+- ADD : Users view.
+- ADD : ModuleBuilder support. (partially)
+- ADD : Configure Tabs view.
+- ADD : Project and Bugs icon added. (from Oxygen)
+- FIXED : Calendar popup. (not polished yet)
+
+version 0.5.2
+- ADD : Unified search.
+- ADD : Popup window.
+
+version 0.5.1
+- ADD : Calendar tab.
+- ADD : Theme preview image added.
+- CHANGE : Action buttons moved to bottom of window (like iPhoto or some other desktop applications).
+
+version 0.5.0
+- rebuild from scratch
+- ADD : SugarCE 6.1 support.
+- ADD : KDE Oxygen icons introduced.
+- ADD : Dark background for subpanels and dashboard.
+- ADD : Styled list view, detail view, and edit view.
+
+version 0.1.0
+- first experimental release
