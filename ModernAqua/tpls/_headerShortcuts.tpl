@@ -34,12 +34,17 @@
  * "Powered by SugarCRM".
  ********************************************************************************/
 *}
-{if count($SHORTCUT_MENU) > 0 && $MODULE_TAB != 'Home'}
+{* FG - Bug 41467 - Let Home module have Shortcuts *}
+{if count($SHORTCUT_MENU) > 0}
 <div id="shortcuts" class="headerList">
 <span>{$APP.LBL_LINK_ACTIONS}</span>
 <ul>
 {foreach from=$SHORTCUT_MENU item=item}
-    <li><a href="{$item.URL}">{$item.IMAGE}&nbsp;<span>{$item.LABEL}</span></a></li>
+	{if $item.URL == "-"}
+          <a></a><span>&nbsp;</span>
+        {else}
+	  <li><a href="{$item.URL}">{$item.IMAGE}&nbsp;<span>{$item.LABEL}</span></a></li>
+	{/if}
 {/foreach}
 </ul>
 </div>

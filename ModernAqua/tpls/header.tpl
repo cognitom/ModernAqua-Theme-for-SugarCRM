@@ -39,9 +39,11 @@
 
 <div id="header">
     {include file="_companyLogo.tpl" theme_template=true}
-    {include file="_headerModuleList.tpl" theme_template=true}
+    <div id="ajaxHeader">
+	{include file="_headerModuleList.tpl" theme_template=true}
+    </div>
     {if $AUTHENTICATED}
-    {include file="_headerShortcuts.tpl" theme_template=true}
+    {* ER2012: include file="_headerShortcuts.tpl" theme_template=true *}
     {include file="_headerLastViewed.tpl" theme_template=true}
     {/if}
 </div>
@@ -54,6 +56,20 @@
     {include file="_headerSearch.tpl" theme_template=true}
     {include file="_globalLinks.tpl" theme_template=true}
 </div>
+
+{literal}
+<iframe id='ajaxUI-history-iframe' src='index.php?entryPoint=getImage&imageName=blank.png' style='display:none'></iframe>
+<input id='ajaxUI-history-field' type='hidden'>
+<script type='text/javascript'>
+if (SUGAR.ajaxUI && !SUGAR.ajaxUI.hist_loaded)
+{
+    YAHOO.util.History.register('ajaxUILoc', "", SUGAR.ajaxUI.go);
+    {/literal}{if $smarty.request.module != "ModuleBuilder"}{* Module builder will init YUI history on its own *}
+    YAHOO.util.History.initialize("ajaxUI-history-field", "ajaxUI-history-iframe");
+    {/if}{literal}
+}
+</script>
+{/literal}
 
 <div id="aqua_toolbar">
 </div>
