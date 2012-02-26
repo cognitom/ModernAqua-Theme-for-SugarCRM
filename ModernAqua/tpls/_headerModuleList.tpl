@@ -102,8 +102,6 @@
 </div>
 {/if}
 
-    {if $AUTHENTICATED}
-    {include file="_headerLastViewed.tpl" theme_template=true}
+{if $AUTHENTICATED}
     {include file="_headerShortcuts.tpl" theme_template=true}
-    {/if}
-
+{/if}

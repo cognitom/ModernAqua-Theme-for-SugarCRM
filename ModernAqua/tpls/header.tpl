@@ -43,7 +43,7 @@
 	{include file="_headerModuleList.tpl" theme_template=true}
     </div>
     {if $AUTHENTICATED}
-    {include file="_headerShortcuts.tpl" theme_template=true}
+    {* ER2012: include file="_headerShortcuts.tpl" theme_template=true *}
     {include file="_headerLastViewed.tpl" theme_template=true}
     {/if}
 </div>
