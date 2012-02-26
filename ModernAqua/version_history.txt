@@ -1,3 +1,9 @@
+version 0.5.8b
+- updated for SugarCRM 6.3 ajax changes
+- updated templates and styles (99% new code taken from official template)
+- all features should work, but there can be some graphical glitches
+- updated by ernierasta (Leszek Cimala zori.[cz|pl|sk] admin@zori.cz)
+
 version 0.5.7
 - ADD : icon_info.csv explain whitch icon in Oxygen is used for ModernAqua.
 - ADD : readme.txt

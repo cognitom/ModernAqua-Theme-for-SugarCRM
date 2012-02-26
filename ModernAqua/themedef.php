@@ -40,8 +40,7 @@ $themedef = array(
     'description' => "MacOSX-like theme by CogniTom",
     'version' => array(
 		'regex_matches' => array(
-			'6\.0\.*',
-			'6\.1\.*',
+			'6\.*\.*',
 		),
 	),
 );
