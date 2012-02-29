@@ -719,7 +719,7 @@ div.moduleTitle {
 /* display statistics in aqua bar bottom */
 #statistics {
     position:fixed;
-    bottom:0; left:250px; right:250px;
+    bottom:0; left:450px; right:450px;
     padding:5px;
     height:23px; line-height:23px;
     color:#000;
@@ -1653,10 +1653,13 @@ div#scheduler div.schedulerDiv h3,
 div#scheduler div.schedulerInvitees h3 {
 	padding-left:6px; color:#333;
 }
+/* ER2012: Disabled to fix line in Home page - clicked on logo
 ul#subpanel_list > li.noBullet table.list,
 div#pageContainer div.dashletPanel table.list {
 	background:none;
 }
+*/
+
 /* 下端を丸くするために必要 */
 ul#subpanel_list > li.noBullet table.list > tbody > tr:last-child > td:first-child,
 div#pageContainer div.dashletPanel table.list > tbody > tr:last-child > td:first-child {
@@ -1675,7 +1678,10 @@ div#pageContainer div.dashletPanel table.list > tbody > tr:last-child > td:last-
 /* @group dashlet style adjustment */
 
 div.dashletToolSet { margin-right:5px; }
-div.dashletNonTable { padding:2px 7px; }
+div.dashletNonTable { 
+	padding:2px 7px; 
+	background: #FFFFFF;
+}
 
 /* @end */
 
@@ -1936,6 +1942,12 @@ body#Activities div#content > table > tbody > tr > td > div.moduleTitle h2,
 body#Calendar div#content > table > tbody > tr > td > div.moduleTitle h2 {
 	display:none;
 }
+/*ER2012: Fix task list (it is still lower?)*/
+body#Calendar div#content > table > tbody > tr > td > table#calendarModule > tbody > tr > td {
+	padding-left:3px;
+}
+
+
 .monthFooter,
 .monthHeader {
     padding:7px;
@@ -2263,14 +2275,16 @@ body#Calendar table.list {
 /* @group Administration & UnifiedSearch */
 
 body#Administration.index div#content,
+body#Home.index div#content,
 body.UnifiedSearch div#content {
 	padding:15px;
 }
 body#Administration.index iframe { display:none; }
 body.UnifiedSearch div#content form {
-	margin:-27px -15px 0;
+	/*ER2012: margin:-27px -15px 0;*/
 }
 body#Administration.index table.h3Row,
+body#Home.index table.formHeader,
 body.UnifiedSearch table.formHeader {
 	-webkit-border-top-left-radius: 5px;
 	-webkit-border-top-right-radius: 5px;
@@ -2286,10 +2300,13 @@ body.UnifiedSearch table.formHeader {
 }
 
 body#Administration.index table.h3Row h3,
+body#Home.index table.formHeader h3,
 body.UnifiedSearch table.formHeader h3 {
 	margin:0;
 }
 body#Administration.index table.view,
+body#Home.index table.list,
+body#Home.index td > h2,
 body.UnifiedSearch table.list,
 body.UnifiedSearch td > h2 {
 	-webkit-border-bottom-left-radius: 5px;
@@ -2302,6 +2319,7 @@ body.UnifiedSearch td > h2 {
 	-webkit-box-shadow: 1px 2px 3px #000;
 	box-shadow: 4px 3px 0 #000;
 }
+body#Home.index td > h2,
 body.UnifiedSearch td > h2 {
 	background:#FFF;
 	padding:3px; font-size:12px;
@@ -2309,6 +2327,7 @@ body.UnifiedSearch td > h2 {
 	font-style:italic;
 }
 /* for when "There were no results found." */
+body#Home.index td > h2 + h2,
 body.UnifiedSearch td > br + h2 {
 	-webkit-border-top-left-radius: 5px;
 	-webkit-border-top-right-radius: 5px;
@@ -2319,6 +2338,8 @@ body.UnifiedSearch td > br + h2 {
 	padding:10px;
 	background:#FDD;
 }
+body#Home.index td > h3,
+body#Home.index td > ul,
 body.UnifiedSearch td > h3,
 body.UnifiedSearch td > ul {
 	color:#FFF;
