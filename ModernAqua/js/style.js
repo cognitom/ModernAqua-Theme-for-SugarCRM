@@ -49,7 +49,7 @@ YAHOO.util.Event.onAvailable('sitemapLinkSpan',function(){
 				ajaxStatus.hideStatus();
 				document.getElementById('sm_holder').innerHTML=r.responseText;
 				with(document.getElementById('sitemap').style){
-					display="block";position="absolute";
+					display="block";position="fixed";
 					right=0;
 					top=80;
 				}
@@ -62,6 +62,8 @@ YAHOO.util.Event.onAvailable('sitemapLinkSpan',function(){
 		YAHOO.util.Connect.asyncRequest('POST','index.php',callback,postData);
 	}
 });
+
+
 function IKEADEBUG()
 {var moduleLinks=document.getElementById('moduleList').getElementsByTagName("a");moduleLinkMouseOver=function()
 {var matches=/grouptab_([0-9]+)/i.exec(this.id);var tabNum=matches[1];var moduleGroups=document.getElementById('subModuleList').getElementsByTagName("span");for(var i=0;i<moduleGroups.length;i++){if(i==tabNum){moduleGroups[i].className='selected';}

@@ -41,6 +41,8 @@
         <img src="{sugar_getimagepath file='MoreDetail.png'}">
     </span>
 </div>
+{* ER2012: next line is sitemap fix *}
+<span id='sm_holder'></span>
 <div id="welcome">
     {$APP.NTC_WELCOME}, <strong><a id="welcome_link" href='index.php?module=Users&action=EditView&record={$CURRENT_USER_ID}'>{$CURRENT_USER}</a></strong> [ <a id="welcome_link" href='{$LOGOUT_LINK}' class='utilsLink'>{$LOGOUT_LABEL}</a> ]
 </div>
