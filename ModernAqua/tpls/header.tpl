@@ -44,7 +44,7 @@
     </div>
     {if $AUTHENTICATED}
     {* ER2012: include file="_headerShortcuts.tpl" theme_template=true *}
-    {include file="_headerLastViewed.tpl" theme_template=true}
+    {* ER2012: include file="_headerLastViewed.tpl" theme_template=true *}
     {/if}
 </div>
 
