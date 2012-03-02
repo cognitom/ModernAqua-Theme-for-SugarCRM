@@ -90,7 +90,10 @@
 {else}
 
 <div id="moduleList">
-<span>Modules</span>
+{* ER2012: added authenticated check to disable "Modules" word on login page *}
+{if $AUTHENTICATED}
+	<span>Modules</span>
+{/if}
 <ul>
     {foreach from=$moduleTopMenu item=module key=name name=moduleList}
     <li class="{if $name == $MODULE_TAB}currentTab{else}notCurrentTab{/if}">{capture name=icon_style assign=icon_style}{assign var="file" value="`$name`.png"}background-image:url({sugar_getimagepath file=$file}){/capture}{sugar_link id="moduleTab_$name" module=$name style=$icon_style}</li>
