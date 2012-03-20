@@ -36,7 +36,7 @@
 *}
 {if $AUTHENTICATED}
 <div id="search">
-    <form name='UnifiedSearch' onsubmit='return SUGAR.unifiedSearchAdvanced.checkUsaAdvanced()'>
+    <form name='UnifiedSearch' action='index.php' onsubmit='return SUGAR.unifiedSearchAdvanced.checkUsaAdvanced()'>
         <input type="hidden" name="action" value="UnifiedSearch">
         <input type="hidden" name="module" value="Home">
         <input type="hidden" name="search_form" value="false">
