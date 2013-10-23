@@ -8,6 +8,8 @@ $manifest = array (
 			2 => '6\.2\.\d(beta\d|RC\d|[a-z])?',
 			3 => '6\.3\.\d(beta\d|RC\d|[a-z])?',
 			4 => '6\.4\.\d(beta\d|RC\d|[a-z])?',
+			5 => '6\.5\.\d(beta\d|RC\d|[a-z])?',
+
 		),
 	),
 	'acceptable_sugar_flavors' => array(
